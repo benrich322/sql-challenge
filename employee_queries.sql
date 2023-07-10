@@ -79,3 +79,20 @@ left join employees
 	
 where
 	dept_name = 'Sales'
+
+-- List each employee in the Sales and Development departments, including their employee number, last name, first name, and department name.
+
+select 
+	dept_emp.emp_no
+	, last_name
+	, first_name
+	, dept_name
+	
+from dept_emp
+left join departments
+	on dept_emp.dept_no = departments.dept_no
+left join employees
+	on dept_emp.emp_no = employees.emp_no
+	
+where
+	dept_name in ('Sales','Development')
