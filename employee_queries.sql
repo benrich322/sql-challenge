@@ -64,4 +64,18 @@ where
 	first_name = 'Hercules'
 	and last_name ILIKE 'b%'
 
+-- List each employee in the Sales department, including their employee number, last name, and first name.
 
+select 
+	dept_emp.emp_no
+	, last_name
+	, first_name
+	
+from dept_emp
+left join departments
+	on dept_emp.dept_no = departments.dept_no
+left join employees
+	on dept_emp.emp_no = employees.emp_no
+	
+where
+	dept_name = 'Sales'
