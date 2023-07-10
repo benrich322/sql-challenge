@@ -96,3 +96,14 @@ left join employees
 	
 where
 	dept_name in ('Sales','Development')
+
+-- List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name).
+
+select 
+	last_name
+	, count(last_name)
+	
+from employees
+	
+group by
+	last_name
