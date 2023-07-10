@@ -6,7 +6,7 @@ CREATE TABLE titles (
 
 CREATE TABLE employees (
     Emp_no INTEGER   NOT NULL,
-    Emp_title_id INTEGER   NOT NULL,
+    Emp_title_id VARCHAR   NOT NULL,
     Birth_date DATE   NOT NULL,
     First_name VARCHAR   NOT NULL,
     Last_Name VARCHAR   NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE employees (
 
 CREATE TABLE departments (
     Dept_no VARCHAR   NOT NULL,
-    Dempt_name VARCHAR   NOT NULL,
+    Dept_name VARCHAR   NOT NULL,
     PRIMARY KEY (Dept_no)
 );
 

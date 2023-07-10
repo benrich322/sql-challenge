@@ -24,5 +24,19 @@ where
 
 -- List the manager of each department along with their department number, department name, employee number, last name, and first name.
 
+select 
+	 dept_manager.dept_no
+	 , dept_name
+	, dept_manager.emp_no
+	, last_name
+	, first_name
+	
+from dept_manager
+left join departments
+	on dept_manager.dept_no = departments.dept_no
+left join employees
+	on dept_manager.emp_no = employees.emp_no
+
+
 
 
