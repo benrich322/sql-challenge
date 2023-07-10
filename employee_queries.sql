@@ -37,6 +37,20 @@ left join departments
 left join employees
 	on dept_manager.emp_no = employees.emp_no
 
+-- List the department number for each employee along with that employee’s employee number, last name, first name, and department name.
+
+select 
+	dept_emp.dept_no
+	, dept_emp.emp_no
+	, last_name
+	, first_name
+	, dept_name
+	
+from dept_emp
+left join departments
+	on dept_emp.dept_no = departments.dept_no
+left join employees
+	on dept_emp.emp_no = employees.emp_no
 
 
 
